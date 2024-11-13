@@ -1,10 +1,61 @@
-fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures', {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'sua_chave_de_api_aqui',
-    'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estatísticas de Futebol</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f3f3f3;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Escolha o Campeonato</h1>
+  <a href="#" class="button" onclick="getLeagueData('Premier League')">Premier League</a>
+  <a href="#" class="button" onclick="getLeagueData('Brasileiro A')">Brasileiro A</a>
+</div>
+
+<script>
+  function getLeagueData(league) {
+    alert(`Você escolheu o campeonato: ${league}`);
+    // Aqui você pode redirecionar para outra página ou carregar dados da API
+    // Exemplo: fetch e exibir informações sobre o campeonato selecionado
   }
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Erro:', error));
+</script>
+
+</body>
+</html>
