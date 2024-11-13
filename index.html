@@ -4,42 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estatísticas de Futebol</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f3f3f3;
-    }
-    .container {
-      text-align: center;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #333;
-    }
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 18px;
-      color: #ffffff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -51,9 +16,11 @@
 
 <script>
   function getLeagueData(league) {
-    alert(`Você escolheu o campeonato: ${league}`);
-    // Aqui você pode redirecionar para outra página ou carregar dados da API
-    // Exemplo: fetch e exibir informações sobre o campeonato selecionado
+    if (league === 'Premier League') {
+      alert("Funcionalidade para Premier League ainda não implementada.");
+    } else if (league === 'Brasileiro A') {
+      window.location.href = 'classificacao.html';
+    }
   }
 </script>
 
