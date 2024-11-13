@@ -1,0 +1,10 @@
+fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures', {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': 'sua_chave_de_api_aqui',
+    'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+  }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Erro:', error));
