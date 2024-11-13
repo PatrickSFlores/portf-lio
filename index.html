@@ -4,23 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estatísticas de Futebol</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
   <h1>Escolha o Campeonato</h1>
+  <a href="classificacao.html" class="button">Brasileiro A</a>
   <a href="#" class="button" onclick="getLeagueData('Premier League')">Premier League</a>
-  <a href="#" class="button" onclick="getLeagueData('Brasileiro A')">Brasileiro A</a>
 </div>
 
 <script>
   function getLeagueData(league) {
-    if (league === 'Premier League') {
-      alert("Funcionalidade para Premier League ainda não implementada.");
-    } else if (league === 'Brasileiro A') {
-      window.location.href = 'classificacao.html';
-    }
+    alert(`Você escolheu o campeonato: ${league}`);
+    // Implementar redirecionamento ou funcionalidade para Premier League futuramente
   }
 </script>
 
